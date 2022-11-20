@@ -125,5 +125,38 @@ Q16. Write a code that gives following as an output.
 
 iNeuroniNeuroniNeuroniNeuron
 
-Ans: print("iNueron"*4)
+Ans: print("iNeuron"*4)
+
+Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
+
+Ans: 
+num=int(input("Enter num:"))
+if num%2==0:
+  print("Number is even")
+else:
+  print("Number is odd")
+
+Q18. What are boolean operator?
+
+Ans:Boolean Operators are those that result in the Boolean values of True and False. 
+These include and, or and not. While and & or require 2 operands, not is a unary operator. Boolean operators are most commonly used in arithmetic computations and logical comparisons.
+
+Q19. What will the output of the following?
+
+1 or 0
+
+0 and 0
+
+True and False and True
+
+1 or 0 or 0
+
+Ans:
+1 or 0 = 1
+
+0 and 0 = 0
+
+True and False and True= False
+
+1 or 0 or 0= 1
 
