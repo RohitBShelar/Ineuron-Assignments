@@ -82,4 +82,48 @@ Structure Keywords: def, class, with, as, pass, lambda.
 Returning Keywords: return, yield.
 Import Keywords: import, from, as.
 
+Q11. Can we use keywords as a variable? Support your answer with reason.
+
+Ans:  Keywords can't be used as a variable name as they are explicitly used for their predefined function.
+
+Q12. What is indentation? What's the use of indentaion in Python?
+
+Ans:Indentation is the leading whitespace (spaces or/and tabs) before any statement in Python. The reason why indentation is important in python is that the indentation serves another purpose other than code readability. Python treats the statements with the same indentation level (statements with an equal number of whitespaces before them) as a single code block.
+
+Q13. How can we throw some output in Python?
+
+Ans:Python provides the print() function to display output to the standard output devices. 
+print(object(s), sep=separator, end=end, file=file, flush=flush)
+Any and many number of objects which shall be converted to string before printing
+
+Q14. What are operators in Python?
+
+Ans:Operators are used to perform operations on variables and values.
+Python divides the operators in the following groups:
+
+Arithmetic operators(+,-,*,/)
+Assignment operators(=)
+Comparison operators(<,>,==)
+Logical operators(&, Or)
+Identity operators
+Membership operators
+Bitwise operators
+
+Q15. What is difference between / and // operators?
+
+Float Division("/"): Divides left hand operand by right hand operand.
+5/2 = 2.5
+Division works in Python the way it's mathematically defined.
+x/y= float(x/y)
+
+While,
+Floor Division("//"): The division of operands where the result is the quotient in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored , i.e., rounded away from zero (towards negative infinity).
+5//2=2
+-11//3 = -4
+
+Q16. Write a code that gives following as an output.
+
+iNeuroniNeuroniNeuroniNeuron
+
+Ans: print("iNueron"*4)
 
