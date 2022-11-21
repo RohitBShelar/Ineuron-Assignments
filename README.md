@@ -316,31 +316,141 @@ Q77. Write a Python program to calculate the simple interest. Formula to calcula
 
 Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
 
+Ans:
+
 Q79. Write a Python program to check if a number is prime or not.
+
+Ans:
+num=int(input("enter num:"))
+if num%2==0:
+  print("Number is Even")
+else:
+  print("Number is Odd")
 
 Q80. Write a Python program to check Armstrong Number.
 
+Ans:
+num=input("enter num:")
+s=0
+n=len(num)
+for i in num:
+  s=s+ pow(int(i),n)
+if int(num)==s:
+  print("Armstrong number")
+else:
+  print("Not an Armstrong number")
+
+
 Q81. Write a Python program to find the n-th Fibonacci Number.
+
+Ans:
+terms=int(input())
+a,b=0,1
+while True:
+  print(a)
+  a,b=b,a+b
+  if a ==terms:
+    break
 
 Q82. Write a Python program to interchange the first and last element in a list.
 
+Ans:l = [1000,298,3579,100,200,-45,900]
+l[0],l[-1]=l[-1],l[0]
+print(l)
+
 Q83. Write a Python program to swap two elements in a list.
+
+Ans:
+l = [1000,298,3579,100,200,-45,900]
+p1=2
+p2=4
+l[p1-1],l[p2-1]=l[p2-1],l[p1-1]
+print(l)
+
 
 Q84. Write a Python program to find N largest element from a list.
 
+Ans:
+def N_largest_elements(num_list,N):
+     print(sorted(num_list)[-N:])
+
 Q85. Write a Python program to find cumulative sum of a list.
+
+Ans:
+num_list=[1,2,3,4,5,6,7,8,9,10]
+sum=0
+for i in num_list:
+    sum=sum+i
+    print(sum)
 
 Q86. Write a Python program to check if a string is palindrome or not.
 
+Ans:
+string = "rohhor"
+s=""
+for j in range(len(string)):
+  s=''.join(string[j])+s
+if s==string:
+    print("palindrome") 
+else:
+    print("not palindrome")
+    
 Q87. Write a Python program to remove i'th element from a string.
+
+Ans:
+string = "rohit"
+i=2
+s=""
+for j in range(len(string)):
+  if j==i-1:
+    continue
+  else:
+    s=s+''.join(string[j])
+
+print(s)
 
 Q88. Write a Python program to check if a substring is present in a given string.
 
+Ans:
+string = "my name is rohit"  
+substring = "name"
+s = string.split()
+if substring in s:
+    print("substring is present")
+else:
+    print("substring is not present")
+
+
 Q89. Write a Python program to find words which are greater than given length k.
 
-Q90. Write a Python program to extract unquire dictionary values.
+ANS:
+def string_k(k, str):
+    string = []
+    text = str.split(" ")
+    for word in text:
+        if len(word) > k:
+            string.append(word)
+            
+    return string   
+k = 3
+str ="my name is rohit"
+print(string_k(k, str))
+
+Q90. Write a Python program to extract unique dictionary values.
+
+Ans:list(set([i for i in dict1.values()]))
 
 Q91. Write a Python program to merge two dictionary.
+
+Ans:
+1)def Merge(dict1, dict2):
+    return(dict2.update(dict1))
+2)def Merge(dict1, dict2):
+    res = {**dict1, **dict2}
+    return res
+3)def Merge(dict1, dict2):
+    res = dict1 | dict2
+    return res
 
 Q92. Write a Python program to convert a list of tuples into dictionary.
 
@@ -348,6 +458,13 @@ Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 
 Ans:
+tuple_list=[('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+tuple_dict={}
+for i in range(len(tuple_list)):
+  tuple_dict[tuple_list[i][0]]=tuple_list[i][1]
+print(tuple_dict)
+
+
 
 Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
 
