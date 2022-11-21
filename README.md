@@ -191,6 +191,15 @@ print("Sum of even numbers:",sum)
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
 
+Ans:num_list=map(int,input("Enter three nos separated by space:").split())
+max=num_list[0]
+for i in num_list:
+  if int(i)>max:
+    max=int(i)
+
+print("Greatest number is :", max)
+
+
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
 
 The number must be divisible by five
@@ -201,6 +210,8 @@ If the number is greater than 500, then stop the loop
 
 numbers = [12, 75, 150, 180, 145, 525, 50]
 Q26. What is a string? How can we declare string in Python?
+
+Ans: string is data type in python that can consist of alh
 
 Q27. How can we access the string using its index?
 
@@ -309,14 +320,38 @@ Q74. What is the use of range() function?
 
 Q75. How can you loop over a dictionary?
 
+Ans:
+
 Coding problems
 Q76. Write a Python program to find the factorial of a given number.
 
+Ans:
+num=int(input("enter num:"))
+factorial=1
+for i in range(1,num+1):
+  factorial=factorial*i
+
+print(f"Factorial of {num} ={factorial}")
+
 Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (PRT)/100
+
+Ans:
+def simple_interest(p,t,r):
+    si = (p * t * r)/100
+    print('The Simple Interest is', si)
+ 
+simple_interest(1000, 5, 7)
 
 Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
 
 Ans:
+ 
+def compound_interest(principle, rate, time):
+    Amount = principle * (pow((1 + rate / 100), time))
+    CI = Amount - principle
+    print("Compound interest is", CI)
+    
+compound_interest(20000, 10, 6)
 
 Q79. Write a Python program to check if a number is prime or not.
 
