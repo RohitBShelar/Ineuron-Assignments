@@ -389,7 +389,7 @@ Ans:The items() method returns a view object that displays a list of dictionary'
 marks = {'Physics':67, 'Maths':87}
 print(marks.items())
 
-# Output: dict_items([('Physics', 67), ('Maths', 87)])
+#Output: dict_items([('Physics', 67), ('Maths', 87)])
 
 Q64. What is the use of pop() function?
 
