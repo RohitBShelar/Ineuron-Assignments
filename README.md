@@ -191,7 +191,8 @@ print("Sum of even numbers:",sum)
 
 Q24. Write a code to take 3 numbers as an input from the user and display the greatest no as output.
 
-Ans:num_list=map(int,input("Enter three nos separated by space:").split())
+Ans:
+num_list=list(map(int,input("Enter three nos separated by space:").split()))
 max=num_list[0]
 for i in num_list:
   if int(i)>max:
@@ -214,6 +215,15 @@ Q26. What is a string? How can we declare string in Python?
 Ans: string is data type in python that can consist of alh
 
 Q27. How can we access the string using its index?
+
+Ans:
+We can access the characters in a string by referring to its index number inside square brackets [] .
+Eg 
+s="rohit"
+print(s[3])
+
+output: i
+
 
 Q28. Write a code to get the desired output of the following
 
@@ -276,7 +286,11 @@ Q53. What is union() in sets? Explain via code.
 
 Q54. What is intersection() in sets? Explain via code.
 
-Q55. What is dictionary ibn Python?
+Q55. What is dictionary in Python?
+
+Ans: A dictionary is a collection which is ordered*, changeable and do not allow duplicates.
+
+ Dictionaries are used to store data values in key:value pairs.
 
 Q56. How is dictionary different from all other data structures.
 
@@ -286,6 +300,9 @@ Q58. What will the output of the following?
 
 var = {}
 print(type(var))
+
+Ans;<class 'dict'>
+
 Q59. How can we add an element in a dictionary?
 
 Q60. Create a dictionary and access all the values in that dictionary.
