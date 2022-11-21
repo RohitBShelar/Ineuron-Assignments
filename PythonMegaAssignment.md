@@ -210,6 +210,9 @@ If the number is greater than 150, then skip it and move to the next number
 If the number is greater than 500, then stop the loop
 
 numbers = [12, 75, 150, 180, 145, 525, 50]
+
+Ans: 
+
 Q26. What is a string? How can we declare string in Python?
 
 Ans: string is data type in python that can consist of alh
@@ -233,6 +236,7 @@ Q29. Write a code to get the desired output of the following
 
 string = "Big Data iNeuron"
 desired_output = "norueNi"
+
 Q30. Resverse the string given in the above question.
 
 Q31. How can you delete entire string at once?
@@ -280,11 +284,45 @@ Q50. What is clear() in sets?
 
 Q51. What is frozen set?
 
+Ans:
+The frozenset() function returns an immutable frozenset object initialized with elements from the given iterable.
+Frozen set is just an immutable version of a Python set object. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
+Due to this, frozen sets can be used as keys in Dictionary or as elements of another set. But like sets, it is not ordered (the elements can be set at any index).
+
 Q52. How is frozen set different from set?
+
+Ans:
+Frozen set is just an immutable version of a Python set object. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation.
 
 Q53. What is union() in sets? Explain via code.
 
+Ans:
+The union() method returns a set that contains all items from the original set, and all items from the specified set(s).
+You can specify as many sets you want, separated by commas.
+It does not have to be a set, it can be any iterable object.
+If an item is present in more than one set, the result will contain only one appearance of this item.
+
+x = {"a", "b", "c"}
+y = {"f", "d", "a"}
+z = {"c", "d", "e"}
+result = x.union(y, z)
+print(result)
+
+Output:{'a', 'e', 'c', 'b', 'f', 'd'}
+
 Q54. What is intersection() in sets? Explain via code.
+
+Ans:
+The intersection() method returns a set that contains the similarity between two or more sets.
+Meaning: The returned set contains only items that exist in both sets, or in all sets if the comparison is done with more than two sets.
+x = {"a", "b", "c"}
+y = {"c", "d", "e"}
+z = {"f", "g", "c"}
+result = x.intersection(y)
+print(result)
+
+Output:
+{'c'}
 
 Q55. What is dictionary in Python?
 
@@ -305,13 +343,53 @@ Ans;<class 'dict'>
 
 Q59. How can we add an element in a dictionary?
 
+Ans:Adding an item to the dictionary is done by using a new index key and assigning a value to it
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+thisdict["color"] = "red"
+
 Q60. Create a dictionary and access all the values in that dictionary.
+
+Ans:
+thisdict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+all_values = thisdict.values()
 
 Q61. Create a nested dictionary and access all the element in the inner dictionary.
 
+Ans:
+students = {
+    123: {'name' : 'Alice', 'age': '23'},
+    321: {'name' : 'Bob', 'age': '34'}
+}
+name1 = students[123]['name']
+name2 = students[321]['name']
+age_alice=students[123]['age']
+age_Bob=students[321]['age']
+print(name1)
+print(name2)
+print(age_alice)
+print(age_Bob)
+
 Q62. What is the use of get() function?
 
+Ans:
+The get() method returns the value of the item with the specified key.
+dictionary.get(keyname, value to be displayed if key doesnt exist)
+
 Q63. What is the use of items() function?
+
+Ans:The items() method returns a view object that displays a list of dictionary's (key, value) tuple pairs.
+marks = {'Physics':67, 'Maths':87}
+print(marks.items())
+
+# Output: dict_items([('Physics', 67), ('Maths', 87)])
 
 Q64. What is the use of pop() function?
 
