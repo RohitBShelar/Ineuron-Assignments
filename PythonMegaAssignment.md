@@ -459,7 +459,13 @@ Ans: A dictionary is a collection which is ordered*, changeable and do not allow
 
 Q56. How is dictionary different from all other data structures.
 
+ANS:A dictionary is a general-purpose data structure for storing a group of objects. A dictionary has a set of keys and each key has a single associated value. When presented with a key, the dictionary will return the associated value.
+While other data structures mostly stores sequence of data that can be accesed with the index only 
+
 Q57. How can we delare a dictionary in Python?
+
+Ans:In Python, a dictionary can be created by placing a sequence of elements within curly {} braces, separated by 'comma'.
+Eg:dict1 = {1: "Python", 2: "Java", 3: "Ruby", 4: "Scala"}
 
 Q58. What will the output of the following?
 
@@ -520,30 +526,55 @@ print(marks.items())
 
 Q64. What is the use of pop() function?
 
+Ans:The pop() function is a pre-defined, inbuilt function in Python lists. It removes an element from the specified index. If no index is being provided, then it removes the last element.
 
 Q65. What is the use of popitems() function?
 
+Ans: popitem() method removes the last inserted key-value pair from the dictionary and returns it as a tuple.
+
 Q66. What is the use of keys() function?
+Ans:keys() method in Python returns a view object that displays all the keys. 
 
 Q67. What is the use of values() function?
+Ans:The values() function returns an object displaying a list of all values within a dictionary.
 
 Q68. What are loops in Python?
+Ans:loops in python are Control flow statement that executes code repeatedly for a particular number of iterations based on some given condition
 
 Q69. How many type of loop are there in Python?
+Ans:For loop and while loop
 
 Q70. What is the difference between for and while loops?
+Ans:The major difference between for loop and the while loop is that for loop is used when the number of iterations is known, whereas execution is done in the while loop until the statement in the program is proved wrong.
 
 Q71. What is the use of continue statement?
+Ans: The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
 
 Q72. What is the use of break statement?
+Ans:The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop. 
 
 Q73. What is the use of pass statement?
+Ans:The pass statement is used as a placeholder for future code. When the pass statement is executed, nothing happens, but you avoid getting an error when empty code is not allowed. Empty code is not allowed in loops, function definitions, class definitions, or in if statements.
 
 Q74. What is the use of range() function?
+
+Ans:The range() function generates the sequence of numbers.
+range(start , stop , step)
 
 Q75. How can you loop over a dictionary?
 
 Ans:
+loop over keys:
+for x in thisdict:
+  print(x)
+  
+loop over values:
+for x in thisdict:
+  print(thisdict[x])
+
+loop over both keys and values:
+for x, y in thisdict.items():
+  print(x, y)
 
 Coding problems
 Q76. Write a Python program to find the factorial of a given number.
