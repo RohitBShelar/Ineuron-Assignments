@@ -305,6 +305,11 @@ A list can have any number of items and they may be of different types (integer,
 
 Q36. How can we access the elements in a list?
 
+Ans: Elements inside the list can be accessed using the index of those elements
+lst = ["Welcome", "to",[1,2],(1,5), "Data", "course"]
+lst[0]>>"Welcome"
+lst[2][0]>> '2'
+
 Q37. Write a code to access the word "iNeuron" from the given list.
 
 lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
@@ -330,25 +335,79 @@ print(lst)
 
 Q40. What is a tuple? How is it different from list?
 
+Ans:A tuple is one of the four inbuilt data types used to store collections in Python. Unlike other data types in python, the elements in tuples are ordered and immutable. They are used to store multiple items in a single variable and provides some built-in operation to work with them.
+They are immutable,iterable and can be heterogenous
+
 Q41. How can you create a tuple in Python?
+
+Ans:
+Tuples can only be created when they are being assigned, hence placing all the elements inside the parenthesis, separated by a comma will create a tuple. 
+tempTuple = ('apple', 'mango', 'banana')
+print(tempTuple)
+
+Output
+('apple', 'mango', 'banana')  
 
 Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
 
+Ans:
+Adding a new element or deleting one is not really an option when dealing with tuples in python, as they are immutable. Even the elements of the tuple cannot be updated until and unless the element is mutable for example a list.
+However,Tuples in python can definitely be reassigned, which is very different from updating a tuple. Reassigning a tuple is redefining the tuple all over again.
+
 Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
+
+Ans:Just like strings, we can also contact two or more tuples to form a new tuple using the ‘+’ operation or apply repetition on a tuple using the ‘*’ operator, just the result here is a python tuple and not a string.
+print(('apple', 'mango') + (1, 2, 3))
+
+output:
+('apple', 'mango', 1, 2, 3)
 
 Q44. Take a tuple as an input and print the count of elements in it.
 
+Ans:
+my_tuple = tuple(input('Enter space-separated elements: ').split())
+print(my_tuple)
+print("length of the tuple is :",len(my_tuple))
+
+output:
+Enter space-separated elements: 1 2 3 r 5 6 o
+('1', '2', '3', 'r', '5', '6', 'o')
+length of the tuple is : 7
+
+
 Q45. What are sets in Python?
 
+Ans:Set is an unordered collection of items, where every element is unique and immutable. However, the set itself is mutable.
 Q46. How can you create a set?
+
+Ans:sets can be created by adding coma separated elements of same type inside the {} braces
+mySet = {1, 2, 3, 5}
+
+or emprty set as
+mySet=set()
 
 Q47. Create a set and add "iNeuron" in your set.
 
+Ans:
+my_set=set()
+print(type(my_set))
+my_set.add("iNeuron")
+print(my_set)
+
 Q48. Try to add multiple values using add() function.
+
+Ans: It gives error,
+TypeError: add() takes exactly one argument
 
 Q49. How is update() different from add()?
 
+Ans:
+add() allows adding single element
+update() allows to add multiple elements
+
 Q50. What is clear() in sets?
+
+Ans:clear() - This method is used to delete all the set elements.
 
 Q51. What is frozen set?
 
@@ -460,6 +519,7 @@ print(marks.items())
 #Output: dict_items([('Physics', 67), ('Maths', 87)])
 
 Q64. What is the use of pop() function?
+
 
 Q65. What is the use of popitems() function?
 
