@@ -293,18 +293,41 @@ print("iNeuron\'s Big Data Course")
 
 Q34. What is a list in Python?
 
+Ans:
+In Python, a list is used to store the sequence of different types of data. Python lists are mutable(changeable), which means we can change their elements after they've been formed.
+
 Q35. How can you create a list in Python?
+
+Ans:
+In Python, a list is created by placing elements inside square brackets [], separated by commas.
+my_list = [1, 2, 3]
+A list can have any number of items and they may be of different types (integer, float, string,list, tuples,dictionary etc.).
 
 Q36. How can we access the elements in a list?
 
 Q37. Write a code to access the word "iNeuron" from the given list.
 
 lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
+
+Ans:
+lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
+print(lst[4][2])
+
+
 Q38. Take a list as an input from the user and find the length of the list.
 
-Q39. Add the word "Big" in the 3rd index of the given list.
+Ans:
+lst = input("enter elements of the list separated by space:").split()
+print("length of the list is :",len(lst))
 
+Q39. Add the word "Big" in the 3rd index of the given list.
 lst = ["Welcome", "to", "Data", "course"]
+
+Ans:
+lst = ["Welcome", "to", "Data", "course"]
+lst.insert(2,"Big")
+print(lst)
+
 Q40. What is a tuple? How is it different from list?
 
 Q41. How can you create a tuple in Python?
