@@ -200,7 +200,6 @@ for i in num_list:
 
 print("Greatest number is :", max)
 
-
 Q25. Write a program to display only those numbers from a list that satisfy the following conditions
 
 The number must be divisible by five
@@ -212,6 +211,21 @@ If the number is greater than 500, then stop the loop
 numbers = [12, 75, 150, 180, 145, 525, 50]
 
 Ans: 
+
+for num in numbers:
+  if num%5==0:
+    if num > 150:
+      continue
+      if num>500:
+        break
+    else:
+      print(num)
+      
+ output:
+ 75
+150
+145
+50
 
 Q26. What is a string? How can we declare string in Python?
 
@@ -232,20 +246,51 @@ Q28. Write a code to get the desired output of the following
 
 string = "Big Data iNeuron"
 desired_output = "iNeuron"
+
+Ans:
+string = "Big Data iNeuron"
+string_list=string.split()
+print(string_list[2])
+
 Q29. Write a code to get the desired output of the following
 
 string = "Big Data iNeuron"
 desired_output = "norueNi"
 
+Ans:
+string = "Big Data iNeuron"
+string_list=string.split()
+print(string_list[2][-1::-1])
+
 Q30. Resverse the string given in the above question.
+
+Ans:
+string = "Big Data iNeuron"
+print(string[-1::-1])
 
 Q31. How can you delete entire string at once?
 
+Ans:
+name="rohit shelar"
+del name
+
 Q32. What is escape sequence?
+
+Ans:
+An escape sequence is a sequence of characters that, when used inside a character or string, does not represent itself but is converted into another character or series of characters that may be difficult or impossible to express directly, like newline (\n), tab (\t), and so on.
+In the escape sequence, a character is preceded by a backslash (\\) followed by the character you want to represent for the new line. We have something like this \\\n.
+This character serves as an escape sequence initiator, and every character (one or more) following it is considered an escape sequence.
 
 Q33. How can you print the below string?
 
 'iNeuron's Big Data Course'
+
+Ans: print("iNeuron's Big Data Course")
+
+or 
+
+print("iNeuron\'s Big Data Course")
+
 Q34. What is a list in Python?
 
 Q35. How can you create a list in Python?
