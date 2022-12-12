@@ -70,8 +70,40 @@ Q11. How do you group data in a Pandas DataFrame by a specific column and apply 
 Ans:
 
 Q12. How do you pivot a Pandas DataFrame?
+Ans:The pivot() function is used to reshaped a given DataFrame organized by given index / column values. 
+This function does not support data aggregation, multiple values will result in a MultiIndex in the columns.
+
+Syntax:
+DataFrame.pivot(self, index=None, columns=None, values=None)
+index=	Column to use to make new frame’s index. If None, uses existing index.	
+columns=Column to use to make new frame’s columns.
 
 Q13. How do you change the data type of a column in a Pandas DataFrame?
+Ans:
+One of the most common actions one needs to undertake when working with pandas DataFrames is data type (or dtype) casting. 
+The 3distinct ways of changing the type of columns in pandas. These methods are
+
+astype()
+to_numeric()
+convert_dtypes()
+
+Using astype()
+The DataFrame.astype() method is used to cast a pandas column to the specified dtype. 
+Let’s suppose we want to convert column A (which is currently a string of type object) into a column holding integers. To do so, we simply need to call astype on the pandas DataFrame object and explicitly define the dtype we wish to cast the column.
+
+df['A'] = df['A'].astype(int)
+df = df.astype({"A": int, "B": str})
+The dtype specified can be a buil-in Python, numpy, or pandas dtype.
+
+Using to_numeric()
+pandas.to_numeric is used to convert columns with non-numeric dtypes to the most suitable numeric time. 
+For example, in order to to cast column A into int all you need to run is
+df['A'] = pd.to_numeric(df['A'])
+
+Using convert_dtypes()
+convert_dtypes() method is included as of pandas version 1.0.0 and is used to convert columns to the best possible dtypes using dtypes supporting pd.NA (missing values). This means that the dtype will be determined at runtime, based on the values included in the specified column(s).
+
+df = df.convert_dtypes()
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
 
