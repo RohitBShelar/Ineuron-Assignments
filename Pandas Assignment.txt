@@ -106,12 +106,25 @@ convert_dtypes() method is included as of pandas version 1.0.0 and is used to co
 df = df.convert_dtypes()
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
+Ans:In order to sort the data frame in pandas, function sort_values() is used. Pandas sort_values() can sort the data frame in Ascending or Descending order.
+# Sorting by column 'Country'
+df.sort_values(by=['Country'])
+# Sorting by column "Population" Descending order
+df.sort_values(by=['Population'], ascending=False)
 
 Q15. How do you create a copy of a Pandas DataFrame?
+Ans:The copy() method returns a copy of the DataFrame.
+
+By default, the copy is a "deep copy" meaning that any changes made in the original DataFrame will NOT be reflected in the copy.
 
 Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+Ans:The loc function in pandas can be used to access groups of rows or columns by label.
+Add each condition you want to be included in the filtered result and concatenate them with the & operator. You'll see our code sample will return a pd.dataframe of our filtered rows.
+
+We can use the pandas dataframe function eval inside a df[] tag to filter on these conditions. Note the .values() at the end.
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+Ans: To get column average or mean from pandas DataFrame use either mean() and describe() method. The DataFrame.mean() method is used to return the mean of the values for the requested axis. If you apply this method on a series object, then it returns a scalar value, which is the mean value of all the observations in the pandas DataFrame.
 
 Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
 
