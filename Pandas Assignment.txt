@@ -127,17 +127,59 @@ Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 Ans: To get column average or mean from pandas DataFrame use either mean() and describe() method. The DataFrame.mean() method is used to return the mean of the values for the requested axis. If you apply this method on a series object, then it returns a scalar value, which is the mean value of all the observations in the pandas DataFrame.
 
 Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+Ans:Sometimes, it may be required to get the standard deviation of a specific column that is numeric in nature. This is where the std() function can be used. The column whose mean needs to be computed can be indexed to the dataframe, and the mean function can be called on this using the dot operator.
+The index of the column can also be passed to find the standard deviation.
+Example:
+print("The standard deviation of column 'Age' is :")
+print(my_df['Age'].std())
+
 
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+Ans:corr() is used to find the pairwise correlation of all columns in the Pandas Dataframe in Python. 
+Any NaN values are automatically excluded. Any non-numeric data type or columns in the Dataframe, it is ignored.
+The Result of the corr() method is a table with a lot of numbers that represents how well the relationship is between two columns.
+
+The number varies from -1 to 1.
+
+1 means that there is a 1 to 1 relationship (a perfect correlation), and for this data set, each time a value went up in the first column, the other one went up as well.
+
+0.9 is also a good relationship, and if you increase one value, the other will probably increase as well.
+
+-0.9 would be just as good relationship as 0.9, but if you increase one value, the other will probably go down.
+
+0.2 means NOT a good relationship, meaning that if one value goes up does not mean that the other will.
+
+
 
 Q20. How do you select specific columns in a DataFrame using their labels?
+Ans:If you have a DataFrame and would like to access or select a specific few rows/columns from that DataFrame, you can use square brackets or other advanced methods such as loc and iloc .
 
 Q21. How do you select specific rows in a DataFrame using their indexes?
+Ans:Often you may want to select the rows of a pandas DataFrame based on their index value.
+If you’d like to select rows based on integer indexing, you can use the .iloc function.
+If you’d like to select rows based on label indexing, you can use the .loc function.
 
 Q22. How do you sort a DataFrame by a specific column?
+Ans:To sort the rows of a DataFrame by a column, use pandas.DataFrame.sort_values() method with the argument by=column_name.
+The sort_values() method does not modify the original DataFrame, but returns the sorted DataFrame.
+You can sort the dataframe in ascending or descending order of the column values. In this tutorial, we shall go through some example programs, where we shall sort dataframe in ascending or descending order.
 
 Q23. How do you create a new column in a DataFrame based on the values of another column?
+Ans:As part of data processing or feature engineering, we usually need to create additional columns out of existing ones. In today’s short guide, we will explore how to perform such operations in pandas.
+
+Specifically, we will explore how to do so in a few different ways, using
+
+apply() method
+numpy.select() method (for a vectorised approach)
+loc property
+Using apply() method
+If you need to apply a method over an existing column in order to compute some values that will eventually be added as a new column in the existing DataFrame, then pandas.DataFrame.apply() method should do the trick.
+
+For example, you can define your own method and then pass it to the apply() method. Let’s suppose we want to create a new column called colF that will be created based on the values of the column colC using the categorise() method defined below:
 
 Q24. How do you remove duplicates from a DataFrame?
+Ans:Pandas drop_duplicates() method helps in removing duplicates from the Pandas Dataframe
+Use the subset parameter if only some specified columns should be considered when looking for duplicates.
 
 Q25. What is the difference between .loc and .iloc in Pandas?
+Ans:Use DataFrame.loc[] and DataFrame.iloc[] to select a single column or multiple columns from pandas DataFrame by column names/label or index position respectively. where loc[] is used with column labels/names and iloc[] is used with column index/position.
